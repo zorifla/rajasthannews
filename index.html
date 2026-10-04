@@ -430,7 +430,7 @@
             <h1>Rajasthan News</h1>
             <p>Free Hindi News &amp; RSS Aggregator &bull; Published by <strong>Zorif</strong></p>
             <div class="header-action-row">
-                <span class="last-updated">Last Updated: September 26, 2026</span>
+                <span class="last-updated">Last Updated: October 4, 2026</span>
                 <a href="#contact" class="header-contact-btn">📞 Contact Us / संपर्क करें</a>
             </div>
         </div>
@@ -601,24 +601,53 @@
                 </p>
             </section>
 
-            <!-- Section 5: Android Device Permissions -->
+            <!-- Section 5: Push Notifications (Firebase Cloud Messaging) & App Updates -->
+            <section id="push-notifications">
+                <h2>5. Push Notifications (Firebase Cloud Messaging) &amp; In-App Updates</h2>
+                <p>
+                    Rajasthan News provides real-time news alerts and seamless application maintenance:
+                </p>
+
+                <h3>A. Firebase Cloud Messaging (FCM)</h3>
+                <p>
+                    The App utilizes <strong>Firebase Cloud Messaging (FCM)</strong>, an infrastructure service provided by Google LLC, to deliver optional breaking news alerts, daily morning bulletins, and important state updates concerning Rajasthan.
+                </p>
+                <ul>
+                    <li><strong>Pseudonymous Token:</strong> To route notifications to your device, a randomized, non-personally identifiable Firebase installation token is generated. This token does not contain personal information (such as your name, email, or phone number) and is used exclusively for transmitting news alerts to the general broadcast topic (<code>daily_readers</code>).</li>
+                    <li><strong>Explicit Permission (Android 13+):</strong> On Android 13 (API 33) and later versions, the App strictly requests explicit runtime permission (<code>POST_NOTIFICATIONS</code>) before presenting any notification alerts.</li>
+                    <li><strong>User Control &amp; Opt-Out:</strong> You may disable news notifications at any time directly through your Android device settings (<em>Settings &rarr; Apps &rarr; Rajasthan News &rarr; Notifications &rarr; Turn Off</em>). Disabling notifications stops all broadcast alerts immediately.</li>
+                </ul>
+
+                <h3>B. Google Play Flexible In-App Updates</h3>
+                <p>
+                    The App integrates the official <strong>Google Play In-App Update</strong> library to keep your application up-to-date with the latest security enhancements, performance improvements, and news feed optimizations.
+                </p>
+                <ul>
+                    <li>Flexible updates download silently in the background while you continue reading news uninterrupted.</li>
+                    <li>All update files are securely verified and distributed directly by Google Play infrastructure. No personal or device data is collected or transmitted to external servers by this mechanism.</li>
+                </ul>
+            </section>
+
+            <!-- Section 6: Android Device Permissions -->
             <section>
-                <h2>5. Android Permissions Used</h2>
+                <h2>6. Android Permissions Used</h2>
                 <p>
                     Rajasthan News requires only standard, non-sensitive Android permissions:
                 </p>
                 <ul>
                     <li><strong>android.permission.INTERNET:</strong> Essential for downloading the latest RSS news feeds, fetching news article thumbnails, and loading news articles in the reader.</li>
                     <li><strong>android.permission.ACCESS_NETWORK_STATE:</strong> Allows the App to detect whether your device is connected to Wi-Fi, cellular, or offline, enabling offline bookmark fallback notices.</li>
+                    <li><strong>android.permission.POST_NOTIFICATIONS:</strong> Required on Android 13 (API 33) and above to display timely breaking news headlines and daily news updates. This permission is completely optional and can be managed in system settings.</li>
+                    <li><strong>com.google.android.gms.permission.AD_ID:</strong> Declared in compliance with Google Play Developer Policy for Android 13+ devices to allow Google Mobile Ads to deliver relevant, frequency-capped advertisements. You can reset or delete this identifier at any time in device settings.</li>
                 </ul>
                 <p>
                     The App does <em>not</em> request permissions for Camera, Microphone, Contacts, Location, SMS, Phone State, or External Storage.
                 </p>
             </section>
 
-            <!-- Section 6: Data Retention & Deletion -->
+            <!-- Section 7: Data Retention & Deletion -->
             <section>
-                <h2>6. Data Retention &amp; User Deletion Rights</h2>
+                <h2>7. Data Retention &amp; User Deletion Rights</h2>
                 <p>
                     Because we do not store any personal user data on external servers, you have full and immediate control over your data:
                 </p>
@@ -628,42 +657,42 @@
                 </ul>
             </section>
 
-            <!-- Section 7: Children's Privacy -->
+            <!-- Section 8: Children's Privacy -->
             <section>
-                <h2>7. Children's Privacy (COPPA &amp; GDPR)</h2>
+                <h2>8. Children's Privacy (COPPA &amp; GDPR)</h2>
                 <p>
                     Rajasthan News is designed for a general audience seeking news updates and is not targeted towards children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe that a child has provided us with personal information, please contact us immediately so we can promptly take appropriate actions.
                 </p>
             </section>
 
-            <!-- Section 8: Security -->
+            <!-- Section 9: Data Security -->
             <section>
-                <h2>8. Data Security</h2>
+                <h2>9. Data Security</h2>
                 <p>
                     We value your trust in using our App. All RSS feed queries and in-app web views use standard Secure Sockets Layer / Transport Layer Security (SSL/TLS) HTTPS encryption to protect data in transit from tampering and eavesdropping.
                 </p>
             </section>
 
-            <!-- Section 9: Disclaimer & Intellectual Property -->
+            <!-- Section 10: Disclaimer & Intellectual Property -->
             <section>
-                <h2>9. Publisher Disclaimer &amp; Fair Use</h2>
+                <h2>10. Publisher Disclaimer &amp; Fair Use</h2>
                 <p>
                     Rajasthan News does not claim ownership of the news articles, headlines, excerpts, or images displayed via RSS feeds. All intellectual property, trademarks, and copyrights belong to their respective publishers (Dainik Bhaskar, Live Hindustan, Amar Ujala, hindi.news18.com). The App serves solely as a user-friendly technological conduit to read publicly distributed RSS summaries with full attribution and links to the original sources.
                 </p>
             </section>
 
-            <!-- Section 10: Policy Updates -->
+            <!-- Section 11: Changes to This Privacy Policy -->
             <section>
-                <h2>10. Changes to This Privacy Policy</h2>
+                <h2>11. Changes to This Privacy Policy</h2>
                 <p>
                     We may update our Privacy Policy periodically to reflect changes in legal requirements, third-party SDK updates, or application features. Any modifications will be posted on this page with an updated "Last Updated" revision date. You are advised to review this page periodically for any updates.
                 </p>
             </section>
 
-            <!-- Section 11: Contact Information (Target for #contact) -->
+            <!-- Section 12: Contact Information (Target for #contact) -->
             <section id="contact">
                 <a id="contact-us" name="contact"></a>
-                <h2>11. Contact Information &amp; Grievance Redressal</h2>
+                <h2>12. Contact Information &amp; Grievance Redressal</h2>
                 <p>
                     If you have any questions, concerns, feedback, technical inquiries, or copyright grievances regarding this Privacy Policy or Rajasthan News, please contact us:
                 </p>
@@ -697,7 +726,7 @@
     <footer>
         <p>&copy; 2026 <strong>Rajasthan News</strong>. All rights reserved.</p>
         <p>Published by <strong>Zorif</strong> &bull; Dedicated to fast, reliable Hindi journalism for Rajasthan.</p>
-        <p style="margin-top: 6px; font-size: 0.78rem;">This privacy policy is hosted in compliance with Google Play Developer Policy, News and Magazines Policy, Google AdMob Policies, and Meta Audience Network terms.</p>
+        <p style="margin-top: 6px; font-size: 0.78rem;">This privacy policy is hosted in compliance with Google Play Developer Policy, News and Magazines Policy, Google AdMob Policies, Firebase Terms of Service, and Meta Audience Network terms.</p>
     </footer>
 
     <!-- Script to automatically scroll to & highlight contact information when #contact is called -->
