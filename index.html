@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy &amp; Contact Information - Rajasthan News</title>
-    <meta name="description" content="Privacy Policy and official contact information for Rajasthan News Android application by Zorif.">
+    <title>Privacy Policy &amp; Terms of Service - Rajasthan News</title>
+    <meta name="description" content="Official Privacy Policy and Terms of Service (Terms &amp; Conditions) for Rajasthan News Android application by Zorif. Learn how we handle user privacy, ad serving, RSS feeds, push notifications, and service terms.">
     <link rel="canonical" href="http://zorifla.github.io/rajasthannews/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,10 @@
             --card-bg: #FFFFFF;
             --border-color: #E2E8F0;
             --accent-crimson: #E11D48;
+            --terms-blue: #2563EB;
+            --terms-blue-bg: #EFF6FF;
+            --terms-blue-border: #BFDBFE;
+            --terms-blue-dark: #1E40AF;
         }
 
         * {
@@ -112,6 +116,22 @@
         .header-contact-btn:hover {
             background: #E8F5E9;
             transform: translateY(-1px);
+        }
+
+        .header-btn-terms {
+            background: #DBEAFE !important;
+            color: #1E40AF !important;
+            border: 1.5px solid #BFDBFE !important;
+            font-weight: 800;
+        }
+
+        .header-btn-terms:hover {
+            background: #BFDBFE !important;
+        }
+
+        .header-btn-contact {
+            background: #FFFFFF !important;
+            color: var(--primary-green) !important;
         }
 
         .last-updated {
@@ -391,6 +411,56 @@
             transform: translateY(-1px);
         }
 
+        /* Terms of Service Section Styling */
+        #terms {
+            scroll-margin-top: 36px;
+            transition: all 0.3s ease;
+        }
+
+        .terms-card-wrapper {
+            background: #FFFFFF;
+            border: 1px solid var(--terms-blue-border);
+            border-left: 6px solid var(--terms-blue);
+            border-radius: 12px;
+            padding: 28px 24px;
+            margin-bottom: 38px;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.05);
+        }
+
+        .terms-card-wrapper h2 {
+            color: var(--terms-blue-dark);
+            border-bottom: 2px solid var(--terms-blue-border);
+        }
+
+        .terms-card-wrapper h2::before {
+            background: var(--terms-blue);
+        }
+
+        .terms-card-wrapper code {
+            background: #DBEAFE;
+            color: var(--terms-blue-dark);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.88rem;
+            font-family: Consolas, Monaco, "Courier New", monospace;
+        }
+
+        #terms:target,
+        .terms-highlight {
+            background-color: #EFF6FF !important;
+            border: 2px solid var(--terms-blue) !important;
+            border-radius: 14px;
+            padding: 28px 24px;
+            box-shadow: 0 6px 22px rgba(37, 99, 235, 0.18);
+            animation: pulseFadeTerms 1.8s ease-in-out;
+        }
+
+        @keyframes pulseFadeTerms {
+            0% { background-color: #DBEAFE; transform: scale(1.01); }
+            50% { background-color: #EFF6FF; }
+            100% { transform: scale(1); }
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -424,14 +494,16 @@
 <body>
 
     <!-- Header Banner -->
-    <header class="site-header">
+    <header class="site-header" id="top">
         <div class="header-content">
-            <div class="app-badge">Official Legal &amp; Policy Document</div>
+            <div class="app-badge">Official App Policies &amp; Legal Compliance</div>
             <h1>Rajasthan News</h1>
-            <p>Free Hindi News &amp; RSS Aggregator &bull; Published by <strong>Zorif</strong></p>
+            <p>Terms of Service &amp; Privacy Policy — Free Hindi News &amp; RSS Aggregator &bull; Published by <strong>Zorif</strong></p>
             <div class="header-action-row">
-                <span class="last-updated">Last Updated: October 4, 2026</span>
-                <a href="#contact" class="header-contact-btn">📞 Contact Us / संपर्क करें</a>
+                <span class="last-updated">Last Updated &amp; Effective Date: November 5, 2026</span>
+                <a href="#terms" class="header-contact-btn header-btn-terms">📜 Terms of Service &darr;</a>
+                <a href="#privacy" class="header-contact-btn">🛡️ Privacy Policy &darr;</a>
+                <a href="#contact" class="header-contact-btn header-btn-contact">📞 Contact Us / संपर्क करें &darr;</a>
             </div>
         </div>
     </header>
@@ -454,10 +526,128 @@
                     <strong>Third-Party Ads</strong>
                     <span>Monetized using Google Mobile Ads (AdMob) &amp; Meta Audience Network mediation.</span>
                 </div>
+                <div class="highlight-item">
+                    <strong>Push Notifications</strong>
+                    <span>Real-time news alerts via Firebase FCM with full user opt-out control.</span>
+                </div>
             </div>
 
+            <!-- ======================================================== -->
+            <!-- TERMS OF SERVICE (TERMS & CONDITIONS) SECTION             -->
+            <!-- ======================================================== -->
+            <section id="terms" class="terms-card-wrapper">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+                    <span style="background: #DBEAFE; color: #1E40AF; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase;">Legal Compliance &amp; Trader Terms</span>
+                    <span style="font-size: 13px; color: var(--text-secondary);">Effective Date: November 5, 2026</span>
+                </div>
+                <h2>📜 Terms of Service (Terms &amp; Conditions)</h2>
+                <p>
+                    Welcome to <strong>Rajasthan News</strong> ("the App", "we", "us", or "our"), a news aggregation mobile application published and operated by <strong>Zorif</strong> (Package: <code>com.rajasthannewspoint.app</code>). These Terms of Service ("Terms") govern your download, access, and use of Rajasthan News via the Google Play Store.
+                </p>
+                <p>
+                    By downloading, installing, accessing, or using this application, you agree to be bound by these Terms and our Privacy Policy below. If you do not agree to these Terms, please do not use the application.
+                </p>
+
+                <h3>1. Developer &amp; Publisher Identification (Trader Declaration)</h3>
+                <p>
+                    In accordance with Google Play Store developer policies and international consumer transparency regulations (including the EU Digital Services Act / Trader requirements):
+                </p>
+                <ul>
+                    <li><strong>Developer / Publisher Name:</strong> Zorif</li>
+                    <li><strong>Application Name:</strong> Rajasthan News (राजस्थान न्यूज़)</li>
+                    <li><strong>Application Package Name:</strong> <code>com.rajasthannewspoint.app</code></li>
+                    <li><strong>Official Support &amp; Grievance Email:</strong> <a href="mailto:zorifla@gmail.com">zorifla@gmail.com</a></li>
+                    <li><strong>Official Website:</strong> <a href="http://zorifla.github.io/rajasthannews/" target="_blank" rel="noopener">http://zorifla.github.io/rajasthannews/</a></li>
+                    <li><strong>App Category:</strong> News &amp; Magazine Aggregator / Hindi RSS Feed Reader</li>
+                    <li><strong>Operating Region:</strong> Rajasthan, India</li>
+                    <li><strong>Support Response Window:</strong> Queries and feedback addressed within 24–48 business hours</li>
+                </ul>
+
+                <h3>2. License Grant &amp; Permitted Use</h3>
+                <p>
+                    We grant you a personal, non-exclusive, non-transferable, revocable license to download, install, and use Rajasthan News strictly for personal, non-commercial reading of news feeds and offline bookmarks. You agree not to:
+                </p>
+                <ul>
+                    <li>Decompile, reverse engineer, disassemble, or attempt to extract the source code or local database schema of the application.</li>
+                    <li>Scrape, spider, crawl, bulk-extract, or republish aggregated news summaries, headlines, or RSS feed items without prior written consent.</li>
+                    <li>Bypass, modify, tamper with, or circumvent any ad-serving technology or security mechanisms implemented in the app.</li>
+                    <li>Use the app for any unlawful purpose, defamatory dissemination, or in violation of applicable local, state, national, or international regulations.</li>
+                </ul>
+
+                <h3>3. RSS News Aggregation, In-App WebViews &amp; Fair Use</h3>
+                <p>
+                    Rajasthan News is a technological feed aggregator that fetches publicly available RSS syndication feeds published by leading Hindi news outlets:
+                </p>
+                <ul>
+                    <li>The App fetches official feeds from <strong>Dainik Bhaskar</strong>, <strong>Live Hindustan</strong>, <strong>Amar Ujala</strong>, and <strong>News18 Hindi</strong>.</li>
+                    <li>The App does not author, edit, modify, censor, or control original news reports or editorial opinions.</li>
+                    <li>When you tap on any article card, the full original article is opened within an in-app <strong>Android WebView</strong>, loading directly from the publisher's official web servers.</li>
+                    <li>All copyrights, trademarks, logos, and journalistic content belong entirely to their respective original publishers under fair use news syndication.</li>
+                </ul>
+
+                <h3>4. Advertisements &amp; Monetization</h3>
+                <p>
+                    Rajasthan News is offered free of charge to all readers. To support ongoing feed maintenance, server infrastructure, and development costs, the app displays third-party advertisements via <strong>Google AdMob</strong> and <strong>Meta Audience Network</strong> through official AdMob mediation. By using the app, you acknowledge and agree that compliant ads may be presented during your news browsing sessions.
+                </p>
+
+                <h3>5. Push Notifications &amp; In-App Updates</h3>
+                <p>
+                    The App provides optional breaking news alerts and daily morning bulletins:
+                </p>
+                <ul>
+                    <li>Notifications are delivered through <strong>Google Firebase Cloud Messaging (FCM)</strong> using the broadcast topic <code>daily_readers</code>. No personal identification data (name, email, phone) is collected or attached to your notification token.</li>
+                    <li>On Android 13 (API 33) and above, notification display strictly requires your explicit runtime permission (<code>POST_NOTIFICATIONS</code>), which can be granted or revoked at any time in system settings.</li>
+                    <li>The App integrates the official Google Play Flexible In-App Updates API to allow seamless background updates while you browse news.</li>
+                </ul>
+
+                <h3>6. Intellectual Property Rights</h3>
+                <p>
+                    All software code, application architecture, graphical UI designs, app icons, logos, and brand identity elements associated with "Rajasthan News" are the intellectual property of <strong>Zorif</strong>, protected by applicable copyright, trademark, and intellectual property laws.
+                </p>
+
+                <h3>7. News Disclaimer &amp; Disclaimer of Warranties ("As-Is")</h3>
+                <p>
+                    Rajasthan News is an independent news aggregation platform. Please note:
+                </p>
+                <ul>
+                    <li>The App is <strong>not affiliated with, authorized, sponsored, or endorsed by</strong> any government authority, political party, or news organization.</li>
+                    <li>All news headlines and article links reflect solely the independent editorial stance of the respective original publishers. We make no representations or warranties regarding the completeness, timeliness, or accuracy of any third-party report.</li>
+                    <li>The App is provided on an <strong>"AS IS" and "AS AVAILABLE"</strong> basis without warranties of any kind, whether express or implied, including fitness for a particular purpose or continuous feed availability.</li>
+                </ul>
+
+                <h3>8. Limitation of Liability</h3>
+                <p>
+                    To the maximum extent permitted by applicable law, in no event shall the developer (Zorif) be held liable for any direct, indirect, incidental, special, exemplary, consequential, or punitive damages arising from your access to, use of, or inability to use the application, or any reliance placed upon aggregated news content.
+                </p>
+
+                <h3>9. Termination &amp; User Data Erasure</h3>
+                <p>
+                    You may terminate your agreement with these Terms at any time by ceasing all use of the application and uninstalling it from your device. You may also completely erase all locally cached news items and offline bookmarks at any time through Android Settings (<strong>Settings &rarr; Apps &rarr; Rajasthan News &rarr; Storage &rarr; Clear Data / Clear Storage</strong>).
+                </p>
+
+                <h3>10. Governing Law &amp; Dispute Resolution</h3>
+                <p>
+                    These Terms of Service and any disputes related thereto shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law principles.
+                </p>
+
+                <h3>11. Modifications to Terms</h3>
+                <p>
+                    We reserve the right to modify, amend, or update these Terms of Service at our discretion. Any revisions will be published on this page with an updated effective date. Continued use of the application following the posting of changes constitutes your acceptance of the revised Terms.
+                </p>
+
+                <h3>12. Contact &amp; Grievance Redressal</h3>
+                <p>
+                    If you have any questions, feedback, copyright concerns, or grievances regarding these Terms of Service, please contact us directly at <a href="mailto:zorifla@gmail.com">zorifla@gmail.com</a>. We endeavor to resolve all inquiries within 24–48 business hours.
+                </p>
+            </section>
+
+            <!-- ======================================================== -->
+            <!-- PRIVACY POLICY SECTIONS                                  -->
+            <!-- ======================================================== -->
+            <div id="privacy"></div>
+
             <!-- Section 1: Introduction -->
-            <section>
+            <section id="introduction">
                 <h2>1. Introduction</h2>
                 <p>
                     Welcome to <strong>Rajasthan News</strong> ("the App", "we", "us", or "our"), published and operated by <strong>Zorif</strong>. We are committed to safeguarding your personal privacy while delivering fast, transparent, and accurate news aggregation for the state of Rajasthan and national headlines.
@@ -724,12 +914,12 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 <strong>Rajasthan News</strong>. All rights reserved.</p>
-        <p>Published by <strong>Zorif</strong> &bull; Dedicated to fast, reliable Hindi journalism for Rajasthan.</p>
-        <p style="margin-top: 6px; font-size: 0.78rem;">This privacy policy is hosted in compliance with Google Play Developer Policy, News and Magazines Policy, Google AdMob Policies, Firebase Terms of Service, and Meta Audience Network terms.</p>
+        <p>&copy; 2026 <strong>Rajasthan News</strong>. All rights reserved. Free Hindi News Aggregator.</p>
+        <p style="margin-top: 4px;">Published by <strong>Zorif</strong> &bull; <a href="#terms" style="color: #555; text-decoration: underline;">Terms of Service</a> &bull; <a href="#privacy" style="color: #555; text-decoration: underline;">Privacy Policy</a> &bull; <a href="terms.html" style="color: #555; text-decoration: underline;">Standalone Terms Page</a> &bull; <a href="#contact" style="color: #555; text-decoration: underline;">Contact Us</a> &bull; <a href="#top" style="color: #555; text-decoration: underline;">Back to Top &uarr;</a></p>
+        <p style="margin-top: 6px; font-size: 0.78rem;">This privacy policy and terms of service are hosted in compliance with Google Play Developer Policy, News and Magazines Policy, EU Digital Services Act (DSA), Google AdMob Policies, Firebase Terms of Service, and Meta Audience Network terms.</p>
     </footer>
 
-    <!-- Script to automatically scroll to & highlight contact information when #contact is called -->
+    <!-- Script to automatically scroll to & highlight contact or terms information when anchor is called -->
     <script>
         function handleAnchorNavigation() {
             var hash = window.location.hash;
@@ -739,6 +929,14 @@
                     setTimeout(function() {
                         contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         contactSection.classList.add('contact-highlight');
+                    }, 120);
+                }
+            } else if (hash === '#terms' || hash === '#terms-of-service' || hash === '#terms-conditions') {
+                var termsSection = document.getElementById('terms');
+                if (termsSection) {
+                    setTimeout(function() {
+                        termsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        termsSection.classList.add('terms-highlight');
                     }, 120);
                 }
             }
